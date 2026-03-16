@@ -1,5 +1,5 @@
 pub struct Graph {
-    adjency_matrix: Vec<Vec<Option<f64>>>,
+    adjency_matrix: Vec<Vec<Option<usize>>>,
     positions: Vec<(f64, f64)>,
     //n: usize,
 }
@@ -16,12 +16,12 @@ impl Graph {
         self.adjency_matrix.len()
     }
 
-    pub fn add_edge(&mut self, i: usize, j: usize, weight: f64) -> &mut Self {
+    pub fn add_edge(&mut self, i: usize, j: usize, weight: usize) -> &mut Self {
         self.adjency_matrix[i][j] = Some(weight);
         self
     }
 
-    pub fn add_undirected_edge(&mut self, i: usize, j: usize, weight: f64) -> &mut Self {
+    pub fn add_undirected_edge(&mut self, i: usize, j: usize, weight: usize) -> &mut Self {
         self.add_edge(i, j, weight);
         self.add_edge(j, i, weight);
         self
