@@ -35,4 +35,8 @@ impl Graph {
             .map(|(j, _)| j)
             .collect()
     }
+
+    pub fn set_position(&mut self, positions: Vec<(f64, f64)>) {
+        self.positions = positions
+    }
 }
