@@ -1,3 +1,5 @@
 mod fruchterman;
-mod graph;
-mod layout;
+pub mod graph;
+pub mod layout;
+pub use graph::Graph;
+pub use layout::apply_layout;
