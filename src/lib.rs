@@ -1,1 +1,2 @@
+mod fruchterman;
 mod graph;
